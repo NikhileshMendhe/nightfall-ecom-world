@@ -10,14 +10,19 @@ const CategoryPage = () => {
   const products = getProductsByCategory(slug || '');
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-green-50">
       <Navbar />
       
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold capitalize mb-6">
-            {slug?.replace('-', ' ')}
-          </h1>
+          <div className="bg-gradient-soft rounded-xl p-8 mb-6">
+            <h1 className="text-3xl font-bold capitalize mb-2 text-foreground">
+              {slug?.replace('-', ' ')}
+            </h1>
+            <p className="text-muted-foreground">
+              Browse our collection of {slug?.replace('-', ' ')} products
+            </p>
+          </div>
           
           <ProductGrid 
             products={products}

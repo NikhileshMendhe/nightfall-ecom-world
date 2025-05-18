@@ -54,11 +54,11 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				amazon: {
-					primary: '#FF9900',
-					secondary: '#146EB4',
-					dark: '#121212',
-					darker: '#0F0F0F',
-					light: '#232F3E'
+					primary: '#2E8B57',
+					secondary: '#8FBC8F',
+					dark: '#F2FCE2',
+					darker: '#E8F5E9',
+					light: '#C8E6C9'
 				}
 			},
 			borderRadius: {
@@ -105,6 +105,10 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-in-out',
 				'carousel': 'carousel 15s infinite ease-in-out'
+			},
+			backgroundImage: {
+				'gradient-soft': 'linear-gradient(184.1deg, rgba(249,255,182,1) 44.7%, rgba(226,255,172,1) 67.2%)',
+				'gradient-light': 'linear-gradient(90deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%)',
 			}
 		}
 	},

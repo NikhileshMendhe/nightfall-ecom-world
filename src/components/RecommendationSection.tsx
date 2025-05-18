@@ -10,8 +10,8 @@ const RecommendationSection = () => {
     .slice(0, 8);
 
   return (
-    <section className="py-8">
-      <h2 className="text-2xl font-semibold mb-6">Recommended For You</h2>
+    <section className="py-10 px-4 bg-gradient-light rounded-xl my-8">
+      <h2 className="text-2xl font-semibold mb-6 text-foreground">Recommended For You</h2>
       <ScrollArea className="whitespace-nowrap pb-4">
         <div className="flex space-x-4">
           {recommendedProducts.map(product => (
