@@ -4,6 +4,7 @@ import ProductGrid from '@/components/ProductGrid';
 import CategorySection from '@/components/CategorySection';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ScrollProgressBar from '@/components/ScrollProgressBar';
 import { featuredProducts, products } from '@/data/products';
 import DealsSection from '@/components/DealsSection';
 import TrendingSection from '@/components/TrendingSection';
@@ -17,6 +18,7 @@ import PromoSection from '@/components/PromoSection';
 const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollProgressBar />
       <Navbar />
       
       <main className="flex-grow">

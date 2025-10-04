@@ -55,19 +55,35 @@ const HeroCarousel = () => {
         {carouselItems.map((item, index) => (
           <div 
             key={item.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            className={`absolute inset-0 transition-all duration-700 ease-out ${
+              index === currentSlide 
+                ? 'opacity-100 translate-x-0' 
+                : index < currentSlide 
+                  ? 'opacity-0 -translate-x-full' 
+                  : 'opacity-0 translate-x-full'
             }`}
           >
             <img 
               src={item.image} 
               alt={item.title} 
-              className="w-full h-full object-cover object-center brightness-75"
+              className="w-full h-full object-cover object-center brightness-75 scale-105"
             />
             <div className="absolute inset-0 flex flex-col justify-center items-start p-8 z-20">
-              <h2 className="text-2xl md:text-4xl font-bold text-white mb-2">{item.title}</h2>
-              <p className="text-lg md:text-xl text-gray-200 mb-6">{item.subtitle}</p>
-              <Button className="amazon-button">Shop Now</Button>
+              <h2 className={`text-2xl md:text-4xl font-bold text-white mb-2 transition-all duration-700 delay-200 ${
+                index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}>
+                {item.title}
+              </h2>
+              <p className={`text-lg md:text-xl text-gray-200 mb-6 transition-all duration-700 delay-300 ${
+                index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}>
+                {item.subtitle}
+              </p>
+              <Button className={`amazon-button transition-all duration-700 delay-400 hover:scale-105 ${
+                index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}>
+                Shop Now
+              </Button>
             </div>
           </div>
         ))}

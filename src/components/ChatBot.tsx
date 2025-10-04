@@ -107,10 +107,10 @@ const ChatBot = () => {
       <Drawer open={isOpen} onOpenChange={setIsOpen}>
         <DrawerTrigger asChild>
           <Button 
-            className="h-14 w-14 rounded-full shadow-lg bg-primary hover:bg-primary/90"
+            className="h-14 w-14 rounded-full shadow-lg shadow-glow bg-primary hover:bg-primary/90 chatbot-float hover:scale-110 transition-transform"
             aria-label="Open chatbot"
           >
-            {isOpen ? <X /> : <MessageSquare />}
+            {isOpen ? <X /> : <MessageSquare className="animate-pulse" />}
           </Button>
         </DrawerTrigger>
         <DrawerContent className="h-[70vh] max-w-[400px] mx-auto rounded-t-xl">

@@ -63,14 +63,90 @@
     @apply bg-secondary hover:bg-secondary/80 text-secondary-foreground font-medium py-2 px-4 rounded-md transition-colors;
   }
 
-  /* ChatBot animation */
+  /* Animations */
   @keyframes bounce-in {
     0% { transform: scale(0.8); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
   }
 
+  @keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-scale {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   .chatbot-animation {
     animation: bounce-in 0.3s ease-out;
+  }
+
+  .chatbot-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .scroll-reveal {
+    opacity: 0;
+    animation: slide-up 0.6s ease-out forwards;
+  }
+
+  .fade-in-scale {
+    opacity: 0;
+    animation: fade-in-scale 0.5s ease-out forwards;
+  }
+
+  /* Stagger animations for grid items */
+  .scroll-reveal:nth-child(1) { animation-delay: 0.1s; }
+  .scroll-reveal:nth-child(2) { animation-delay: 0.2s; }
+  .scroll-reveal:nth-child(3) { animation-delay: 0.3s; }
+  .scroll-reveal:nth-child(4) { animation-delay: 0.4s; }
+  .scroll-reveal:nth-child(5) { animation-delay: 0.5s; }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px -10px hsl(var(--primary) / 0.3);
+  }
+
+  .hover-zoom {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-zoom:hover {
+    transform: scale(1.05);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
   }
 }
 

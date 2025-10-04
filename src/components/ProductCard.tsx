@@ -47,12 +47,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const discountPercentage = oldPrice ? Math.round(((oldPrice - price) / oldPrice) * 100) : 0;
 
   return (
-    <div className="product-card flex flex-col h-full">
-      <Link to={`/product/${id}`} className="block h-48 overflow-hidden">
+    <div className="product-card flex flex-col h-full hover-lift group">
+      <Link to={`/product/${id}`} className="block h-48 overflow-hidden rounded-t-lg">
         <img 
           src={image} 
           alt={title} 
-          className="w-full h-full object-contain bg-gradient-soft p-4 hover:scale-105 transition-transform"
+          className="w-full h-full object-contain bg-gradient-soft p-4 group-hover:scale-110 transition-transform duration-500"
         />
       </Link>
       <div className="p-4 flex flex-col flex-grow">
@@ -82,7 +82,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           
           <Button 
             onClick={handleAddToCart}
-            className="w-full mt-3"
+            className="w-full mt-3 group-hover:translate-y-0 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300"
           >
             Add to Cart
           </Button>

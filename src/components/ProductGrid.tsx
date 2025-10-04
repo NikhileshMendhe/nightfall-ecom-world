@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import ProductCard, { Product } from './ProductCard';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 interface ProductGridProps {
   title?: string;
@@ -14,6 +15,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
   limit 
 }) => {
   const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
+  const { ref, isVisible } = useScrollAnimation();
   
   useEffect(() => {
     if (limit && limit > 0) {
@@ -32,13 +34,21 @@ const ProductGrid: React.FC<ProductGridProps> = ({
   }
 
   return (
-    <div className="py-8">
+    <div ref={ref} className="py-8">
       {title && (
-        <h2 className="text-2xl font-semibold mb-6">{title}</h2>
+        <h2 className={`text-2xl font-semibold mb-6 ${isVisible ? 'fade-in-scale' : ''}`}>
+          {title}
+        </h2>
       )}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        {displayProducts.map(product => (
-          <ProductCard key={product.id} product={product} />
+        {displayProducts.map((product, index) => (
+          <div 
+            key={product.id} 
+            className={isVisible ? 'scroll-reveal' : 'opacity-0'}
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            <ProductCard product={product} />
+          </div>
         ))}
       </div>
     </div>
