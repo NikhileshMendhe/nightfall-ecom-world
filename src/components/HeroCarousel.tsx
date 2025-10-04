@@ -47,8 +47,11 @@ const HeroCarousel = () => {
 
   return (
     <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 animated-gradient opacity-20 z-0"></div>
+      
       {/* Gradient overlay at bottom */}
-      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-amazon-dark to-transparent z-10"></div>
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background to-transparent z-10"></div>
       
       {/* Carousel items */}
       <div className="relative h-full">

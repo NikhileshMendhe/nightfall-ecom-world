@@ -5,6 +5,7 @@ import CategorySection from '@/components/CategorySection';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollProgressBar from '@/components/ScrollProgressBar';
+import FloatingIcons from '@/components/FloatingIcons';
 import { featuredProducts, products } from '@/data/products';
 import DealsSection from '@/components/DealsSection';
 import TrendingSection from '@/components/TrendingSection';
@@ -17,7 +18,8 @@ import PromoSection from '@/components/PromoSection';
 
 const Index = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative">
+      <FloatingIcons />
       <ScrollProgressBar />
       <Navbar />
       

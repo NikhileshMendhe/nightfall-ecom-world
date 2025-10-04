@@ -1,6 +1,8 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { products } from "@/data/products";
+import CountdownTimer from "./CountdownTimer";
+import AnimatedSectionTitle from "./AnimatedSectionTitle";
 
 const DealsSection = () => {
   // Filter some products to show as deals
@@ -10,7 +12,12 @@ const DealsSection = () => {
   
   return (
     <section className="py-8">
-      <h2 className="text-2xl font-semibold mb-6">Deals of the Day</h2>
+      <AnimatedSectionTitle>Deals of the Day</AnimatedSectionTitle>
+      
+      <div className="mb-8 p-6 rounded-xl border-2 border-primary/30 bg-gradient-to-r from-primary/5 to-transparent">
+        <p className="text-center text-sm md:text-base mb-4 font-medium">⚡ Limited Time Offers - Hurry Up!</p>
+        <CountdownTimer />
+      </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {dealProducts.map((product) => {
           const discountPercentage = product.oldPrice 
