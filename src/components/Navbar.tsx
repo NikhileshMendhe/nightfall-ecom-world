@@ -130,16 +130,16 @@ const Navbar = () => {
       {/* Bottom navbar with categories */}
       <nav className="bg-amazon-light py-2 px-4 overflow-x-auto whitespace-nowrap">
         <div className="container mx-auto flex gap-4 items-center">
-          <Button variant="ghost" className="flex items-center" size="sm">
+          <Button variant="ghost" className="flex items-center text-foreground hover:text-amazon-primary" size="sm">
             <Menu className="h-4 w-4 mr-1" />
             All
           </Button>
-          <Link to="/category/electronics" className="text-gray-300 hover:text-white">Electronics</Link>
-          <Link to="/category/clothing" className="text-gray-300 hover:text-white">Clothing</Link>
-          <Link to="/category/home" className="text-gray-300 hover:text-white">Home & Kitchen</Link>
-          <Link to="/category/books" className="text-gray-300 hover:text-white">Books</Link>
-          <Link to="/category/toys" className="text-gray-300 hover:text-white">Toys & Games</Link>
-          <Link to="/deals" className="text-amazon-primary font-medium">Today's Deals</Link>
+          <Link to="/category/electronics" className="text-foreground hover:text-amazon-primary font-medium">Electronics</Link>
+          <Link to="/category/clothing" className="text-foreground hover:text-amazon-primary font-medium">Clothing</Link>
+          <Link to="/category/home" className="text-foreground hover:text-amazon-primary font-medium">Home & Kitchen</Link>
+          <Link to="/category/books" className="text-foreground hover:text-amazon-primary font-medium">Books</Link>
+          <Link to="/category/toys" className="text-foreground hover:text-amazon-primary font-medium">Toys & Games</Link>
+          <Link to="/deals" className="text-amazon-primary font-medium hover:text-amber-400">Today's Deals</Link>
         </div>
       </nav>
     </header>
