@@ -1,5 +1,12 @@
-
 import { Product } from '../components/ProductCard';
+import productHeadphones from '@/assets/product-headphones.png';
+import productSmartwatch from '@/assets/product-smartwatch.png';
+import productKeyboard from '@/assets/product-keyboard.png';
+import productCharger from '@/assets/product-charger.png';
+import productAmbientLight from '@/assets/product-ambient-light.png';
+import productMouse from '@/assets/product-mouse.png';
+import productEarbuds from '@/assets/product-earbuds.png';
+import productSpeaker from '@/assets/product-speaker.png';
 
 export const products: Product[] = [
   {
@@ -8,7 +15,7 @@ export const products: Product[] = [
     price: 249.99,
     oldPrice: 299.99,
     rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+    image: productHeadphones,
     category: 'electronics',
     description: 'Premium noise cancelling headphones with up to 30 hours of battery life and crystal-clear audio quality.'
   },
@@ -18,7 +25,7 @@ export const products: Product[] = [
     price: 179.99,
     oldPrice: 199.99,
     rating: 4.2,
-    image: 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80',
+    image: productSmartwatch,
     category: 'electronics',
     description: 'Track your fitness goals, receive notifications, and more with this versatile smart watch.'
   },
@@ -28,19 +35,58 @@ export const products: Product[] = [
     price: 59.99,
     oldPrice: 79.99,
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+    image: productSpeaker,
     category: 'electronics',
     description: 'Waterproof portable speaker with impressive sound quality and 10-hour battery life.'
   },
   {
     id: 4,
-    title: 'Ultra HD 4K Smart TV (55-inch)',
-    price: 499.99,
-    oldPrice: 649.99,
+    title: 'Wireless Charging Pad',
+    price: 49.99,
+    oldPrice: 69.99,
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
+    image: productCharger,
     category: 'electronics',
-    description: 'Crystal clear 4K resolution smart TV with built-in streaming services and voice control.'
+    description: 'Sustainable bamboo wireless charger with glowing LED indicator and fast charging technology.'
+  },
+  {
+    id: 11,
+    title: 'Premium Wireless Mouse',
+    price: 89.99,
+    oldPrice: 119.99,
+    rating: 4.8,
+    image: productMouse,
+    category: 'electronics',
+    description: 'Ergonomic wireless mouse with precision tracking and glowing LED accents.'
+  },
+  {
+    id: 12,
+    title: 'Mechanical Gaming Keyboard',
+    price: 159.99,
+    oldPrice: 199.99,
+    rating: 4.7,
+    image: productKeyboard,
+    category: 'electronics',
+    description: 'Compact mechanical keyboard with green LED underglow and sustainable materials.'
+  },
+  {
+    id: 13,
+    title: 'True Wireless Earbuds',
+    price: 129.99,
+    oldPrice: 159.99,
+    rating: 4.5,
+    image: productEarbuds,
+    category: 'electronics',
+    description: 'Premium noise-canceling earbuds with charging case and all-day battery life.'
+  },
+  {
+    id: 14,
+    title: 'Smart Ambient Light',
+    price: 79.99,
+    rating: 4.4,
+    image: productAmbientLight,
+    category: 'electronics',
+    description: 'Smart ambient light orb with customizable colors and app control for the perfect atmosphere.'
   },
   {
     id: 5,
