@@ -9,6 +9,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 import CategoryPage from "./pages/CategoryPage";
+import ShopifyDashboard from "./pages/ShopifyDashboard";
 import ChatBot from "./components/ChatBot";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/category/:slug" element={<CategoryPage />} />
+          <Route path="/shopify" element={<ShopifyDashboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <ChatBot />

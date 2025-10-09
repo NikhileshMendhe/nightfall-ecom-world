@@ -8,7 +8,8 @@ import {
   Menu, 
   Package, 
   Home,
-  ChevronDown
+  ChevronDown,
+  Store
 } from 'lucide-react';
 import { 
   DropdownMenu,
@@ -140,6 +141,10 @@ const Navbar = () => {
           <Link to="/category/books" className="text-foreground hover:text-amazon-primary font-medium">Books</Link>
           <Link to="/category/toys" className="text-foreground hover:text-amazon-primary font-medium">Toys & Games</Link>
           <Link to="/deals" className="text-amazon-primary font-medium hover:text-amber-400">Today's Deals</Link>
+          <Link to="/shopify" className="flex items-center gap-1 text-foreground hover:text-amazon-primary font-medium">
+            <Store className="h-4 w-4" />
+            Shopify
+          </Link>
         </div>
       </nav>
     </header>
